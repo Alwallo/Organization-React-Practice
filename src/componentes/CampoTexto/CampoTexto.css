@@ -1,0 +1,42 @@
+.contenedorCampo{
+    display: flex;
+    flex-direction: column;
+}
+
+.etiqueta{
+    margin: auto auto 8px 95px;
+
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 22px;
+    color: #212121;
+}
+
+.texto{
+    width: 930px;
+    height: 80px;
+    margin: auto auto 28px 95px;
+    padding-left: 20px;
+    background: #FFFFFF;
+    font-family: 'Montserrat';
+    font-weight: 400;
+    font-size: 16px;
+    mix-blend-mode: normal;
+    box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.06);
+    border-radius: 0px;
+}
+
+.texto::placeholder{
+    width: 328px;
+    height: 20px;
+
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+
+    color: #A4A4A4;
+}

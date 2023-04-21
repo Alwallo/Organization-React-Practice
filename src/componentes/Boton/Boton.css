@@ -1,0 +1,13 @@
+button{
+    width: 167px;
+    height: 80px;
+    background: #6278F7;
+    mix-blend-mode: normal;
+    border-radius: 10px;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    color: #FFFFFF;
+    margin: auto auto 8px 95px;
+}

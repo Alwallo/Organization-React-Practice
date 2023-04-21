@@ -1,25 +1,22 @@
-import logo from './logo.svg';
+import { useState } from 'react';
 import './App.css';
-import Header from './componentes/Header.js';
+import Header from './componentes/Header/Header.js';
+import Formulario from './componentes/Formulario/Formulario';
+import MiOrg from './componentes/MiOrg/MiOrg';
 
 function App() {
+
+  const [mostrarFormulario, actualizarMostrar] = useState(true);
+
+  const cambiarEstado = () => {
+    actualizarMostrar(!mostrarFormulario);
+  }
+
   return (
     <div className="App">
-      <header className="App-header">
-        <Header></Header>
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Holis soy Alvaro y estoy aprendiendo Git con Douglas
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header></Header>
+      {mostrarFormulario ? <Formulario></Formulario> : <></>}
+      <MiOrg switch={cambiarEstado}></MiOrg>
     </div>
   );
 }

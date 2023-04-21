@@ -1,0 +1,27 @@
+.contenedorOpc{
+    display: flex;
+    flex-direction: column;
+}
+
+.etiqueta{
+    margin: auto auto 8px 95px;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 22px;
+    color: #212121;
+}
+
+.comboBox{
+    width: 930px;
+    height: 80px;
+    margin: auto auto 28px 95px;
+    font-family: 'Montserrat';
+    padding-left: 20px;
+    font-weight: 400;
+    font-size: 16px;
+    background: #FFFFFF;
+    mix-blend-mode: normal;
+    box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.06);
+}

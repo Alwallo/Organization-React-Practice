@@ -1,0 +1,28 @@
+* {
+    padding: 0;
+    margin: 0;
+    border: 0;
+  }
+
+.formulario{
+    margin: 82px auto 84px auto;
+    width: 1121px;
+    height: 783px;
+    background: #F7F7F7;
+    box-shadow: 7px 7px 15px rgba(0, 0, 0, 0.08);
+    border-radius: 20px;
+    text-align: start;
+}
+
+.formulario--etiqueta{
+    margin: 35px auto 40px 95px;
+    padding-top: 35px;
+    font-family: 'Prata', serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 43px;
+    display: flex;
+    align-items: center;
+    color: #212121;
+}
