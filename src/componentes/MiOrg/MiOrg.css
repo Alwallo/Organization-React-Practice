@@ -1,9 +1,9 @@
 .organizacion {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    padding: 0 100px 0 500px;
     margin-top: 24px;
+    margin-bottom: 32px;
 }
 
 .tituloOrg {
@@ -16,4 +16,6 @@
 
 .añadirOrg {
     cursor: pointer;
+    position: absolute;
+    right: 20%;
 }

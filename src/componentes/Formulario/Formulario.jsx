@@ -1,10 +1,10 @@
 import './Formulario.css'
 import CampoTexto from '../CampoTexto';
-import ListaOpciones from '../ListaOpciones/ListaOpciones.js';
+import ListaOpciones from '../ListaOpciones/ListaOpciones.jsx';
 import Boton from '../Boton/Boton';
 import { useState } from 'react';
 
-const Formulario = () => {
+const Formulario = (props) => {
 
     const [nombre, setNombre] = useState("");
     const [puesto, setPuesto] = useState("");
@@ -48,7 +48,8 @@ const Formulario = () => {
         <ListaOpciones 
             Titulo="Equipo"
             valor={equipo}
-            actualizar={setEquipo}>
+            actualizar={setEquipo}
+            equipos={props.equipos}>
         </ListaOpciones>
         <Boton Texto="Crear"></Boton>
     </form>
