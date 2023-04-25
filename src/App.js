@@ -14,7 +14,7 @@ function App() {
       colorSecundario: "#D9F7E9"
     },
     {
-      titulo: "Front End",
+      titulo: "Front-End",
       colorPrimario: "#82CFFA",
       colorSecundario: "#E8F8FF"
     },
@@ -24,7 +24,7 @@ function App() {
       colorSecundario: "#F0F8E2"
     },
     {
-      titulo: "Devops",
+      titulo: "DevOps",
       colorPrimario: "#E06B69",
       colorSecundario: "#FDE7E8"
     },
@@ -46,18 +46,25 @@ function App() {
 ]
 
   const [mostrarFormulario, actualizarMostrar] = useState(false);
+  const [colaborador, setColaborador] = useState([]);
 
   const cambiarEstado = () => {
     actualizarMostrar(!mostrarFormulario);
   }
 
+  const addColaborador = (colab) => {
+    setColaborador([...colaborador, colab]);
+  }
+
   return (
     <div className="App">
       <Header></Header>
-      {mostrarFormulario ? <Formulario equipos={equipos.map( (equipo) => equipo.titulo)}></Formulario> : <></>}
+      {mostrarFormulario ? <Formulario equipos={equipos.map( (equipo) => equipo.titulo)} 
+      addColaborador={addColaborador}></Formulario> : <></>}
       <MiOrg switch={cambiarEstado}></MiOrg>
       {
-        equipos.map( (equipo) => <Equipo datos={equipo} key={equipo.titulo}/>)
+        equipos.map( (equipo) => <Equipo datos={equipo} key={equipo.titulo}
+        colaboradores={colaborador.filter(colaborador => colaborador.equipo === equipo.titulo)}/>)
       }
     </div>
   );

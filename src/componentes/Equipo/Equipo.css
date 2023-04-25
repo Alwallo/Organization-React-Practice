@@ -12,3 +12,9 @@
     display: inline-block;
     padding-bottom: 8px;
 }
+
+.colaborador-info{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}

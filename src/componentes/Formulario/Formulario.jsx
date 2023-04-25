@@ -11,6 +11,8 @@ const Formulario = (props) => {
     const [foto, setFoto] = useState("");
     const [equipo, setEquipo] = useState("");
 
+    const {addColaborador} = props;
+
     const manejarClick = (evento) =>{
         evento.preventDefault();  //Evento que impide la recarga de la página al momento del submit
         let datos = {
@@ -19,7 +21,7 @@ const Formulario = (props) => {
             foto,
             equipo
         }
-        console.log(datos);
+        addColaborador(datos);
     }
 
     return <form className='formulario' onSubmit={manejarClick}>

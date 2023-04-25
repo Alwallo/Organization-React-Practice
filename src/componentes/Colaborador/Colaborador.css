@@ -1,0 +1,38 @@
+.tarjetita{
+    width: 262px;
+    height: 272px;
+    background-color: #FFFFFF;
+    border-top: 92px solid;
+    margin-top: 39px;
+    box-sizing: border-box;
+}
+
+.tarjetita h3, .tarjetita h4{
+    position: relative;
+    top: -30%;
+}
+
+.foto-colab{
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    position: relative;
+    top: -40%;
+}
+
+.tarjetita h3{
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    color: #6278F7;
+    margin-bottom: 10px;
+}
+
+.tarjetita h4{
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    color: #212121;
+}
