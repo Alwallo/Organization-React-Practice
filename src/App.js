@@ -4,10 +4,13 @@ import Header from './componentes/Header/Header.jsx';
 import Formulario from './componentes/Formulario/Formulario';
 import MiOrg from './componentes/MiOrg/MiOrg';
 import Equipo from './componentes/Equipo/Equipo';
+import hexToRgba from 'hex-to-rgba';
 
 function App() {
 
-  const equipos = [
+  const [mostrarFormulario, actualizarMostrar] = useState(false);
+  const [colaborador, setColaborador] = useState([]);
+  const [equipos, setEquipos] = useState([
     {
       titulo: "Programación",
       colorPrimario: "#57C278",
@@ -43,10 +46,7 @@ function App() {
       colorPrimario: "#FF8A29",
       colorSecundario: "#FFEEDF"
     }
-]
-
-  const [mostrarFormulario, actualizarMostrar] = useState(false);
-  const [colaborador, setColaborador] = useState([]);
+]);
 
   const cambiarEstado = () => {
     actualizarMostrar(!mostrarFormulario);
@@ -54,6 +54,21 @@ function App() {
 
   const addColaborador = (colab) => {
     setColaborador([...colaborador, colab]);
+  }
+
+  const removeColab = () => {
+    console.log('Eliminando...');
+  }
+
+  const changeColor = (color, titulo) => {
+    const updatedEquipos = equipos.map((equipo) => {
+        if(equipo.titulo === titulo){
+          equipo.colorPrimario = color;
+          equipo.colorSecundario = hexToRgba(color, 0.5);
+        }
+        return equipo;
+    });
+    setEquipos(updatedEquipos);
   }
 
   return (
@@ -64,7 +79,8 @@ function App() {
       <MiOrg switch={cambiarEstado}></MiOrg>
       {
         equipos.map( (equipo) => <Equipo datos={equipo} key={equipo.titulo}
-        colaboradores={colaborador.filter(colaborador => colaborador.equipo === equipo.titulo)}/>)
+        colaboradores={colaborador.filter(colaborador => colaborador.equipo === equipo.titulo)}
+        removeColab = { removeColab } changeColor={changeColor}/>)
       }
     </div>
   );

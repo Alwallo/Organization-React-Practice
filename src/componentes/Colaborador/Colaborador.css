@@ -5,6 +5,7 @@
     border-top: 92px solid;
     margin-top: 39px;
     box-sizing: border-box;
+    position: relative;
 }
 
 .tarjetita h3, .tarjetita h4{
@@ -35,4 +36,10 @@
     font-weight: 400;
     font-size: 16px;
     color: #212121;
+}
+
+.eliminar{
+    position: absolute;
+    right: 0px;
+    top: -90px
 }
