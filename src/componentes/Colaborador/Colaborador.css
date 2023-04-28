@@ -43,3 +43,7 @@
     right: 0px;
     top: -90px
 }
+
+.eliminar:hover{
+    cursor: pointer;
+}

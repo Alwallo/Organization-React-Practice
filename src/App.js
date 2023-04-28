@@ -56,8 +56,9 @@ function App() {
     setColaborador([...colaborador, colab]);
   }
 
-  const removeColab = () => {
-    console.log('Eliminando...');
+  const removeColab = (id) => {
+    const newColabs = colaborador.filter((colab) => colab.id !== id);
+    setColaborador(newColabs);
   }
 
   const changeColor = (color, titulo) => {

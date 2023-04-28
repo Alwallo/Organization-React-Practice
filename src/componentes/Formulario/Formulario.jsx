@@ -3,6 +3,7 @@ import CampoTexto from '../CampoTexto';
 import ListaOpciones from '../ListaOpciones/ListaOpciones.jsx';
 import Boton from '../Boton/Boton';
 import { useState } from 'react';
+import { v4 as uuid } from 'uuid';
 
 const Formulario = (props) => {
 
@@ -16,6 +17,7 @@ const Formulario = (props) => {
     const manejarClick = (evento) =>{
         evento.preventDefault();  //Evento que impide la recarga de la página al momento del submit
         let datos = {
+            id: uuid(),
             nombre,
             puesto,
             foto,

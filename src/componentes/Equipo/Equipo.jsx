@@ -13,7 +13,9 @@ const Equipo = (props) => {
             <h1 style={ {borderColor: colorPrimario} }>{titulo}</h1>
             <div className='colaborador-info'>
                 { colaboradores.map( (colaborador, index) => 
-                <Colaborador datos={colaborador} key={index} colorPrimario={colorPrimario} colorSecundario={colorSecundario} removeColab={removeColab}/>) }
+                <Colaborador datos={colaborador} key={index} 
+                colorPrimario={colorPrimario}
+                removeColab={removeColab}/>) }
             </div>
         </section>
     }
